@@ -1,2 +1,7 @@
 # docker-tox
-Container with python 2.7.X, 3.6.x and tox
+
+* alpine: 3.7
+* python: 2.7.13, 3.6.4
+* tox: 2.9.1
+
+
