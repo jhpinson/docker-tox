@@ -31,7 +31,7 @@ RUN pyenv global 3.6.4 2.7.13
 RUN pyenv rehash
 
 RUN pip install --upgrade pip
-RUN pip install tox
+RUN pip install tox==2.9.1
 
 
 
