@@ -2,6 +2,8 @@ FROM alpine:3.7
 
 MAINTAINER jh.pinson@gmail.com
 
+WORKDIR /app
+
 RUN apk add --no-cache --update \
   bash \
   build-base \
@@ -31,7 +33,7 @@ RUN pyenv global 3.6.4 2.7.13
 RUN pyenv rehash
 
 RUN pip install --upgrade pip
-RUN pip install tox==2.9.1
-
+RUN pip install tox wheel
+RUN pip install git+https://github.com/dstanek/tox-run-command.git
 
 
