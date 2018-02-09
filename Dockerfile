@@ -16,7 +16,19 @@ RUN apk add --no-cache --update \
   openssl \
   openssl-dev \
   readline-dev \
-  sqlite-dev
+  sqlite-dev \
+  zlib \
+  zlib-dev \
+  jpeg \
+  jpeg-dev \
+  libpng \
+  libpng-dev \
+  freetype \
+  freetype-dev \
+  libxml2-dev \
+  libxslt-dev
+
+RUN ln -s /lib/libz.so /usr/lib/
 
 RUN update-ca-certificates
 
@@ -35,5 +47,3 @@ RUN pyenv rehash
 RUN pip install --upgrade pip
 RUN pip install tox wheel
 RUN pip install git+https://github.com/dstanek/tox-run-command.git
-
-
