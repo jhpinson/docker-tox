@@ -44,6 +44,8 @@ RUN pyenv install 3.6.4
 RUN pyenv global 3.6.4 2.7.13
 RUN pyenv rehash
 
+RUN mkdir /root/.pip && echo -e "[global]\nextra-index-url = https://pypi.tawenda-tech.org/" > /root/.pip/pip.conf
+
 RUN pip install --upgrade pip
 RUN pip install tox wheel
 RUN pip install git+https://github.com/dstanek/tox-run-command.git
